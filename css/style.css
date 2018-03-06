@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("images/cork-background.jpg");
+}
+.note {
+    padding-top: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+#note_title {
+    width: 200px;
+    height: 20px;
+    margin: 0 20px;
+    background-color: yellow;
+}
+#note_content {
+    width: 200px;
+    height: 80px;
+    margin: 0 20px;
+    background-color: yellow;
+}
+.button {
+    float: left;
+    margin: 10px;
+}
+
+#btn {
+    font: bold 13px Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    padding: 0.5em 1em;
+    background: linear-gradient(top, rgba(0, 0, 0, .15), rgba(0, 0, 0, .3));
+    background-color: #66A7BB;
+    border-radius: 3px;
+    transition: transform .150s, background .01s;
+    text-transform: uppercase;
+    margin: 20px 10px;
+}
+#removebtn {
+    font: bold 13px Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    padding: 0.5em 1em;
+    background: linear-gradient(top, rgba(0, 0, 0, .15), rgba(0, 0, 0, .3));
+    background-color: #66A7BB;
+    border-radius: 3px;
+    transition: transform .150s, background .01s;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+#draggable {
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    margin: 90px 40px;
+    background-color: #66A7BB;
+
+
+}
+
