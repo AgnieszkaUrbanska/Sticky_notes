@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     addButton.addEventListener("click", function() {
-        // event.preventDefault();
+        event.preventDefault();
 
         var newTitle = title.value;
         var newContent = content.value;
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var newNote = document.createElement("div");
         var newH1 = document.createElement("h1");
 
-        //to działa, wyskakuje alert "wpisz notatkę"
-        //tworzy się div z tekstem, ale w jednym ciągu, bez podziału na tytuł i treść notatki
+        //tworzy się div z tekstem, ale w jednym ciągu, bez podziału na tytuł i treść notatki-chciałabym to jakoś podzielić
+        //wpisywana treść wychodzi poza diva
         if (content.value.length >= 1 && content.value.length <=50) {
             newDiv.appendChild(newNote);
             newNote.id = "draggable";
@@ -26,30 +26,30 @@ document.addEventListener("DOMContentLoaded", function() {
             newNote.innerHTML = newTitle+newContent;
 
             //niestety czyszczenie formularza nie działa(po dodaniu notatki), mogę dodać kolejną notatkę o tej samej treści
-            newTitle.value = '';
-            newContent.value = '';
+            title.value = '';
+            content.value = '';
+
         } else {
             window.alert ("Wpisz notatkę!");
             return false;
         }
 
-        // draggable działa tylko na 1 elemencie
+        // draggable działa tylko na pierwszym utworzonym elemencie
         $(function() {
             $( "#draggable" ).draggable();
 
         });
 
+        var remButton = document.createElement("button");
+        remButton.innerText = "Delete";
+        newDiv.appendChild(remButton);
+        remButton.id = "removebtn";
+
         remButton.addEventListener("click", function () {
 
-            var noteRemove = document.getElementById("draggable");
-            var toRemove = noteRemove;
+            //usuwa notatkę, ale button "Delete" zostaje, chciałabym żebby usuwał się razem z notatką
+            newNote.parentElement.removeChild(newNote);
 
-            toRemove.removeChild(toRemove);
-
-            var remButton = document.createElement("button");
-            remButton.innerText = "Delete";
-            newDiv.appendChild(remButton);
-            remButton.id = "removebtn";
 
 
         });
