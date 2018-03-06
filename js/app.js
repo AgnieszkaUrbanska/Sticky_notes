@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
             newH1.innerText = newDiv.value;
             newNote.innerHTML = newTitle+newContent;
 
-            //niestety czyszczenie formularza nie działa(po dodaniu notatki), mogę dodać kolejną notatkę o tej samej treści
-            title.value = '';
-            content.value = '';
+            //czyszczenie formularza, działa
+            $("#note_form")[0].reset();
 
         } else {
             window.alert ("Wpisz notatkę!");
