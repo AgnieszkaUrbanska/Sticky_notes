@@ -60,9 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
 
-
     });
 
 });
-
+// Drobna wskazówka - ogólnie piszesz w czystym js, moze łątwiej będzie w jquery, skoro już podpięłaś tą bibliotekę?
 
