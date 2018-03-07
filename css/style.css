@@ -1,9 +1,16 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
-    background-image: url("images/cork-background.jpg");
+    background-image: url("../images/wood.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+
 }
 .note {
     padding-top: 20px;
@@ -15,13 +22,13 @@ body {
     width: 200px;
     height: 20px;
     margin: 0 20px;
-    background-color: yellow;
+    background-color: #59d6e5;
 }
 #note_content {
     width: 200px;
     height: 80px;
     margin: 0 20px;
-    background-color: yellow;
+    background-color: #59d6e5;
 }
 .button {
     float: left;
@@ -29,27 +36,29 @@ body {
 }
 
 #btn {
-    font: bold 13px Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    color: dimgray;
     padding: 0.5em 1em;
-    background: linear-gradient(top, rgba(0, 0, 0, .15), rgba(0, 0, 0, .3));
-    background-color: #66A7BB;
+    background-color: #278691;
     border-radius: 3px;
-    transition: transform .150s, background .01s;
     text-transform: uppercase;
     margin: 20px 10px;
+
 }
 #removebtn {
-    font: bold 13px Helvetica, Arial, sans-serif;
+    font: bold 15px Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    padding: 0.5em 1em;
-    background: linear-gradient(top, rgba(0, 0, 0, .15), rgba(0, 0, 0, .3));
-    background-color: #66A7BB;
+    padding: 3px;
+    opacity: 0.8;
+    background-color: red;
     border-radius: 3px;
-    transition: transform .150s, background .01s;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    position: absolute;
+    margin-top: 97px;
+    margin-left: 180px;
+    display: block;
+    border-style: none;
+
 }
 
 
@@ -57,9 +66,39 @@ body {
     width: 200px;
     height: 200px;
     border: 1px solid grey;
-    margin: 90px 40px;
+    border-radius: 2px;
+    box-shadow: 3px 3px grey;
+    /*margin: 90px 40px;*/
     background-color: #66A7BB;
-
+    word-wrap: break-word;
+    position: absolute;
 
 }
 
+h1 {
+    margin-top: 0;
+    padding-top: 0;
+    width: 200px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    position: absolute;
+}
+
+p {
+    position: relative;
+    margin-top: 50px;
+}
+
+input {
+    border: 1px solid gray;
+    padding: 5px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0;
+}

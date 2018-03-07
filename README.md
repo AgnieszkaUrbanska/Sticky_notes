@@ -1,5 +1,6 @@
 # Sticky_notes
 Project made using:
-HTML
-CSS
-JavaScript
+HTML,
+CSS,
+JavaScript,
+jQuery
