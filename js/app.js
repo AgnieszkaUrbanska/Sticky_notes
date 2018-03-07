@@ -14,14 +14,23 @@ document.addEventListener("DOMContentLoaded", function() {
         var newContent = content.value;
 
         //tworzy się div, h1 się nie tworzy
+        /* --- answer ---
+           pamiętaj, że po stworzeniu elementu i przypisaniu do zmiennej, musimy go dodać dod DOM.
+           zrobiłaś to w linijce newDiv.appendChild(newNote);
+        */
         var newNote = document.createElement("div");
         var newH1 = document.createElement("h1");
 
         //tworzy się div z tekstem, ale w jednym ciągu, bez podziału na tytuł i treść notatki-chciałabym to jakoś podzielić
-        //wpisywana treść wychodzi poza diva
+        /* --- answer ---
+           myśle ze odpowiednia kolejność dodawania zalątwi sprawę
+           jak na razie h1 nie dodaje do DOM
+        */
         if (content.value.length >= 1 && content.value.length <=50) {
             newDiv.appendChild(newNote);
+            newNote.appendChild(newH1);
             newNote.id = "draggable";
+            newH1.id = "newH1Note";
             newH1.innerText = newDiv.value;
             newNote.innerHTML = newTitle+newContent;
 
@@ -33,25 +42,24 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
 
-        // draggable działa tylko na pierwszym utworzonym elemencie
-        $(function() {
-            $( "#draggable" ).draggable();
+        // draggable działa :)
+        $("div").each(function() {
+            $(this).draggable();
 
         });
 
         var remButton = document.createElement("button");
         remButton.innerText = "Delete";
-        newDiv.appendChild(remButton);
+        newNote.appendChild(remButton); //zmiana newDiv na newNote wrzuciła remButton do odpowiedniego diva
         remButton.id = "removebtn";
 
         remButton.addEventListener("click", function () {
 
-            //usuwa notatkę, ale button "Delete" zostaje, chciałabym żebby usuwał się razem z notatką
             newNote.parentElement.removeChild(newNote);
 
 
-
         });
+
 
     });
 
