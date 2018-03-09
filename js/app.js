@@ -1,14 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(function() {
 
-    var addButton = document.querySelector("#btn");
-    var remButton = document.querySelector("#removebtn");
-    // var editButton = document.querySelector("editButton");
+    var addButton = $("#btn");
+    // var remButton = document.querySelector("#removebtn");
     var newDiv = document.querySelector(".div_note");
     var title = document.getElementById("note_title");
     var content = document.getElementById("note_content");
 
 
-    addButton.addEventListener("click", function() {
+    addButton.on("click", function() {
         event.preventDefault();
 
         var newTitle = title.value;
@@ -39,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).draggable();
 
         });
+
 
         var remButton = document.createElement("button");
         remButton.innerText = "X";
