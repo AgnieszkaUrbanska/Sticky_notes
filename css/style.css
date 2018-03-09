@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("../images/wood.jpg");
+    background-image: url("../images/cork-background.jpg");
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     font-family: 'Shadows Into Light', cursive;
     color: white;
@@ -20,47 +19,57 @@ body {
 
 #note_title {
     width: 200px;
-    height: 20px;
-    margin: 0 20px;
+    height: 30px;
+    margin: 10px 20px;
     background-color: #59d6e5;
 }
 #note_content {
     width: 200px;
     height: 80px;
-    margin: 0 20px;
+    margin: 10px 20px;
     background-color: #59d6e5;
+
 }
 .button {
     float: left;
-    margin: 10px;
+    margin-top: 50px;
+    margin-left: 10px;
+
+}
+
+#btn:hover {
+    cursor: pointer;
 }
 
 #btn {
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
     color: dimgray;
-    padding: 0.5em 1em;
-    background-color: #278691;
+    padding: 0.5em;
+    background-color: #119191;
     border-radius: 3px;
     text-transform: uppercase;
     margin: 20px 10px;
-
+    width: 150px;
+    float: left;
 }
 #removebtn {
-    font: bold 15px Helvetica, Arial, sans-serif;
+    font: bold 16px Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    padding: 3px;
+    padding: 1px;
     opacity: 0.8;
     background-color: red;
-    border-radius: 3px;
+    border-radius: 2px;
     position: absolute;
-    margin-top: 97px;
-    margin-left: 180px;
+    margin-top: 100px;
+    margin-left: 183px;
     display: block;
     border-style: none;
 
 }
-
+#removebtn:hover {
+    cursor: pointer;
+}
 
 #draggable {
     width: 200px;

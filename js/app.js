@@ -25,10 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             newNote.appendChild(newText);
 
             newNote.id = "draggable";
-            // newH1.append(newTitle);
-            // newText.append(newContent);
-            // newH1.innerText = newDiv.value;
-            // newNote.innerHTML = newTitle+newContent;
             newH1.innerText = newTitle;
             newText.innerText = newContent;
 
@@ -46,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var remButton = document.createElement("button");
         remButton.innerText = "X";
-        newNote.appendChild(remButton); //zmiana newDiv na newNote wrzuciła remButton do odpowiedniego diva
+        newNote.appendChild(remButton);
         remButton.id = "removebtn";
 
         remButton.addEventListener("click", function () {
@@ -59,5 +55,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
-// Drobna wskazówka - ogólnie piszesz w czystym js, moze łątwiej będzie w jquery, skoro już podpięłaś tą bibliotekę?
+
 
