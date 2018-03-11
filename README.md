@@ -1,5 +1,5 @@
 # Sticky_notes
-Project made using:
+My first project made using:
 HTML,
 CSS,
 JavaScript,
