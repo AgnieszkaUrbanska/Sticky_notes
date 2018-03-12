@@ -46,9 +46,11 @@ $(function() {
         remButton.id = "removebtn";
 
         remButton.addEventListener("click", function () {
-
-            newNote.parentElement.removeChild(newNote);
-
+            var x = confirm("Are you sure you want to delete?");
+            if (x)
+                newNote.parentElement.removeChild(newNote);
+            else
+                return false;
 
         });
 
