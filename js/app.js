@@ -46,7 +46,8 @@ $(function() {
         remButton.id = "removebtn";
 
         remButton.addEventListener("click", function () {
-            var x = confirm("Are you sure you want to delete?");
+
+            var x = confirm("Are you sure?");
             if (x)
                 newNote.parentElement.removeChild(newNote);
             else
